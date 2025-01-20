@@ -1,21 +1,16 @@
-// Food prices
 const foodPrices = {
     'Chocolate Cake': 150,
     'Vanilla Cake': 120,
-    'Red Velvet Cake': 180,
     'Koshari': 50,
     'Ful Medames': 30,
     'Mahshi': 70,
     'Coffee': 20,
     'Tea': 15,
-    'Smoothie': 40
 };
 
-// Update total cost when selecting food item and quantity
 document.getElementById('foodItem').addEventListener('change', updateTotalCost);
 document.getElementById('quantity').addEventListener('input', updateTotalCost);
 
-// Function to update total cost
 function updateTotalCost() {
     const foodItem = document.getElementById('foodItem').value;
     const quantity = document.getElementById('quantity').value;
@@ -28,7 +23,7 @@ function updateTotalCost() {
     }
 }
 
-// Order form handling
+
 document.getElementById('orderForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
@@ -37,7 +32,6 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     const name = document.getElementById('name').value;
     const address = document.getElementById('address').value;
 
-    // Display the order details
     alert(`Order placed! 
     Name: ${name}
     Address: ${address}
